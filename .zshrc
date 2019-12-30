@@ -32,3 +32,9 @@ add-zsh-hook chpwd chpwd_recent_dirs
 bindkey '^r' anyframe-widget-execute-history
 bindkey '^]' anyframe-widget-cd-ghq-repository
 bindkey '^b' anyframe-widget-checkout-git-branch
+
+# tmux
+[[ -z "$TMUX" && ! -z "$PS1" ]] && tmux
+
+# anyenv
+eval "$(anyenv init -)"
