@@ -24,6 +24,10 @@ zplug load --verbose
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+fi
+
 # anyframe
 zstyle ":anyframe:selector:" use fzf
 autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
