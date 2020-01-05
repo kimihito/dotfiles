@@ -36,6 +36,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
