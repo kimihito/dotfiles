@@ -11,7 +11,4 @@ languages:
   ruby:
     lint-command: 'rubocop --stdin'
     lint-stdin: true
-    format-command: 'rubocop -o output.txt -a'
-
-
-
+    format-command: 'rubocop --safe-auto-correct --stdin - 2>/dev/null | sed "1,/^====================$/d"'
