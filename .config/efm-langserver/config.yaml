@@ -1,0 +1,17 @@
+languages:
+  markdown:
+    lint-command: 'markdownlint -s'
+    lint-stdin: true
+    lint-formats:
+      - '%f:%l %m'
+  vim:
+    lint-command: 'vint -'
+    lint-stdin: true
+
+  ruby:
+    lint-command: 'rubocop --stdin'
+    lint-stdin: true
+    format-command: 'rubocop -o output.txt -a'
+
+
+
