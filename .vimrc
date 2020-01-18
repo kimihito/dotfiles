@@ -127,13 +127,13 @@ let g:lsp_async_completion = 1
 if executable('efm-langserver')
   augroup LspEFM
     autocmd!
-    autocmd User lsp_setup call lsp#register_server({ 
+    autocmd User lsp_setup call lsp#register_server({
      \ 'name': 'efm-langserver',
      \ 'cmd' : {server_info->['efm-langserver', '-c='.$HOME.'/.config/efm-langserver/config.yaml', '-log='.$HOME.'/.config/efm-langserver/logs/efm-langserver.log']},
      \ 'whitelist': ['vim', 'markdown', 'ruby'],
      \ })
     autocmd BufWritePre <buffer> silent! LspDocumentFormatSync
-  augroup END 
+  augroup END
 endif
 
 "netrw
