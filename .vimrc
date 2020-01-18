@@ -130,3 +130,8 @@ if executable('efm-langserver')
     autocmd BufWritePre <buffer> silent! LspDocumentFormatSync
   augroup END 
 endif
+
+"netrw
+let g:netrw_liststyle=1
+let g:netrw_banner=0
+let g:netrw_preview=1
