@@ -13,6 +13,10 @@ set hidden
 " 入力中のコマンドをステータスに表示する
 set showcmd
 
+set expandtab
+set tabstop=2
+set shiftwidth=2
+
 if has("autocmd")
   filetype plugin on
   filetype indent on
