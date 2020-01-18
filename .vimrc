@@ -42,6 +42,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
 Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim'
+Plug 'ntpeters/vim-better-whitespace'
 
 call plug#end()
 
