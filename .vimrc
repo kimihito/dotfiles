@@ -16,6 +16,9 @@ set showcmd
 set expandtab
 set tabstop=2
 set shiftwidth=2
+set smarttab
+set autoindent
+set smartindent
 
 if has("autocmd")
   filetype plugin on
