@@ -156,3 +156,7 @@ endif
 let g:netrw_liststyle=1
 let g:netrw_banner=0
 let g:netrw_preview=1
+
+" vim-better-whitespace
+let g:strip_whitespace_on_save=1
+let g:strip_whitespace_confirm = 0
