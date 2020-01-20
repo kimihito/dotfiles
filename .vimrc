@@ -20,6 +20,15 @@ set smarttab
 set autoindent
 set smartindent
 
+" <Leader>というプレフィックスキーにスペースを使用する
+let g:mapleader = "\<Space>"
+
+" スペース + . でvimrcを開く open .vimrc
+nnoremap <Leader>. :new ~/.vimrc<CR>
+
+" スペース + wでファイル保存
+nnoremap <Leader>w :w<CR>
+
 if has("autocmd")
   filetype plugin on
   filetype indent on
