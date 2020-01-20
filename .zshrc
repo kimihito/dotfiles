@@ -19,7 +19,7 @@ zplug "plugins/git", from:oh-my-zsh
 
 zplug "mollifier/anyframe"
 
-zplug "mattn/efm-langserver", as:command, rename-to:efm-langserver, :from:gh-r
+zplug "mattn/efm-langserver", as:command, rename-to:efm-langserver, from:gh-r
 
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
