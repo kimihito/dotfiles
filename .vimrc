@@ -37,7 +37,12 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'altercation/vim-colors-solarized'
 
-Plug '/home/linuxbrew/.linuxbrew/opt/fzf'
+if has("mac")
+  Plug '/usr/local/opt/fzf'
+else
+ Plug '/home/linuxbrew/.linuxbrew/opt/fzf'
+endif
+
 Plug 'junegunn/fzf.vim'
 
 Plug 'prabirshrestha/async.vim'
@@ -129,7 +134,6 @@ function! RipgrepFzf(query, fullscreen)
 endfunction
 
 command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
-
 
 " vim-lsp
 let g:lsp_signs_enabled = 1 " enable signs
