@@ -60,6 +60,7 @@ Plug 'tpope/vim-endwise'
 Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim'
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'vim-jp/vimdoc-ja'
 
 call plug#end()
 
