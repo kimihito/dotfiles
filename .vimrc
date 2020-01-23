@@ -104,6 +104,8 @@ set wrapscan
 set hlsearch
 " ESC連打でハイライト解除
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
+" 日本語の行の連結時には空白を入力しない
+set formatoptions+=mMj
 
 
 " fzf.vim
