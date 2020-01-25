@@ -1,3 +1,6 @@
+autoload -U compinit
+compinit
+
 setopt hist_ignore_all_dups
 setopt hist_ignore_dups
 setopt share_history
