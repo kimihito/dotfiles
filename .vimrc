@@ -19,6 +19,7 @@ set shiftwidth=2
 set smarttab
 set autoindent
 set smartindent
+set backspace=indent,eol,start
 
 " <Leader>というプレフィックスキーにスペースを使用する
 let g:mapleader = "\<Space>"
