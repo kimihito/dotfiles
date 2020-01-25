@@ -5,6 +5,11 @@ setopt append_history
 setopt inc_append_history
 setopt hist_no_store
 
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  export PATH="/usr/local/bin:$PATH"
+  export PATH="/usr/local/sbin:$PATH"
+fi
+
 source ~/.zplug/init.zsh
 zplug "zplug/zplug", hook-build: 'zplug --self-manage'
 zplug "zsh-users/zsh-history-substring-search"

@@ -2,6 +2,7 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
 tap "linuxbrew/xorg"
+brew "zplug"
 brew "anyenv"
 brew "openssl@1.1"
 brew "libffi"
@@ -19,4 +20,5 @@ brew "tig"
 brew "tmux"
 brew "vim"
 brew "xclip" if OS.linux?
+brew "reattach-to-user-namespace" if OS.mac?
 brew "zsh"
