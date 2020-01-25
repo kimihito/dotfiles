@@ -18,5 +18,5 @@ brew "the_silver_searcher"
 brew "tig"
 brew "tmux"
 brew "vim"
-brew "xclip"
+brew "xclip" if OS.linux?
 brew "zsh"
