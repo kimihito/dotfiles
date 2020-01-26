@@ -139,6 +139,18 @@ endfunction
 
 command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
 
+nnoremap [fzf] <Nop>
+nmap <Leader>f [fzf]
+nnoremap <silent> [fzf]f :Files<CR>
+nnoremap <silent> [fzf]r :RG<CR>
+nnoremap <silent> [fzf]c :Colors<CR>
+nnoremap <silent> [fzf]h :History<CR>
+nnoremap <silent> [fzf]b :Buffers<CR>
+nnoremap <silent> [fzf]; :Commands<CR>
+nnoremap <silent> [fzf]:h :Helptags<CR>
+nnoremap <silent> [fzf]ll :Lines<CR>
+nnoremap <silent> [fzf]lb :BLines<CR>
+
 " vim-lsp
 let g:lsp_signs_enabled = 1 " enable signs
 let g:lsp_diagnostics_echo_cursor = 1 " enable echo under cursor when in normal mode
