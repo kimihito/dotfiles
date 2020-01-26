@@ -22,3 +22,4 @@ brew "vim"
 brew "xclip" if OS.linux?
 brew "reattach-to-user-namespace" if OS.mac?
 brew "zsh"
+brew "gibo"
