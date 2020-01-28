@@ -48,3 +48,11 @@ bindkey '^b' anyframe-widget-checkout-git-branch
 # anyenv
 export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init -)"
+
+autoload -U compinit
+compinit
+
+alias readlink='greadlink'
+alias awk='gawk'
+alias sed='gsed'
+alias date='gdate'

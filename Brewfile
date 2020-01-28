@@ -20,6 +20,11 @@ brew "tig"
 brew "tmux"
 brew "vim"
 brew "xclip" if OS.linux?
-brew "reattach-to-user-namespace" if OS.mac?
 brew "zsh"
 brew "gibo"
+if OS.mac?
+  brew "reattach-to-user-namespace"
+  brew 'coreutils'
+  brew 'gawk'
+  brew 'gnu-sed'
+end
