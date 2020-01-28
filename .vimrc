@@ -63,6 +63,10 @@ Plug 'itchyny/lightline.vim'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'vim-jp/vimdoc-ja'
 
+Plug 'airblade/vim-rooter'
+
+Plug 'tpope/vim-rails'
+
 call plug#end()
 
 " 行番号を表示
