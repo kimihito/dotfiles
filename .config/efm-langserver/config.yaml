@@ -12,3 +12,5 @@ languages:
     lint-command: 'rubocop --stdin'
     lint-stdin: true
     format-command: 'rubocop --safe-auto-correct --stdin - 2>/dev/null | sed "1,/^====================$/d"'
+  json:
+    format-command: 'jq .'
