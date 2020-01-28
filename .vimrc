@@ -180,3 +180,6 @@ let g:netrw_preview=1
 " vim-better-whitespace
 let g:strip_whitespace_on_save=1
 let g:strip_whitespace_confirm = 0
+
+" vim-rooter
+let g:rooter_change_directory_for_non_project_files = 'current'
