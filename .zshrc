@@ -20,6 +20,7 @@ zplug "lib/history", from:oh-my-zsh
 zplug "mollifier/anyframe"
 
 zplug "mattn/efm-langserver", as:command, rename-to:efm-langserver, from:gh-r
+zplug "mattn/memo", as:command, rename-to:memo, from:gh-r
 
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
