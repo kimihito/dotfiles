@@ -46,4 +46,5 @@ bindkey '^b' anyframe-widget-checkout-git-branch
 [[ -z "$TMUX" && ! -z "$PS1" ]] && tmux
 
 # anyenv
+export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init -)"
