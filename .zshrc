@@ -1,13 +1,3 @@
-autoload -U compinit
-compinit
-
-setopt hist_ignore_all_dups
-setopt hist_ignore_dups
-setopt share_history
-setopt append_history
-setopt inc_append_history
-setopt hist_no_store
-
 if [[ "$OSTYPE" == "darwin"* ]]; then
   export PATH="/usr/local/bin:$PATH"
   export PATH="/usr/local/sbin:$PATH"
@@ -24,6 +14,8 @@ zplug "mafredri/zsh-async"
 zplug 'dracula/zsh', as:theme
 
 zplug "plugins/git", from:oh-my-zsh
+
+zplug "lib/history", from:oh-my-zsh
 
 zplug "mollifier/anyframe"
 
