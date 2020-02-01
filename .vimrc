@@ -67,6 +67,8 @@ Plug 'airblade/vim-rooter'
 
 Plug 'tpope/vim-rails'
 
+Plug 'jiangmiao/auto-pairs'
+
 call plug#end()
 
 " 行番号を表示
