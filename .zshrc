@@ -15,6 +15,8 @@ zplug 'dracula/zsh', as:theme
 
 zplug "plugins/git", from:oh-my-zsh
 
+zplug "plugins/docker-compose", from:oh-my-zsh
+
 zplug "lib/history", from:oh-my-zsh
 
 zplug "mollifier/anyframe"
