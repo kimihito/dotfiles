@@ -52,8 +52,11 @@ bindkey '^b' anyframe-widget-checkout-git-branch
 export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init -)"
 
-autoload -U compinit
-compinit
+autoload -U +X compinit && compinit
+autoload -U +X bashcompinit && bashcompinit
+# stack
+export PATH="$HOME/.local/bin:$PATH"
+eval "$(stack --bash-completion-script stack)"
 
 alias readlink='greadlink'
 alias awk='gawk'
