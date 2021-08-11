@@ -2,7 +2,6 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
 tap "linuxbrew/xorg"
-tap "homebrew/caskroom-versions"
 tap "bibendi/dip"
 tap "linuxbrew/xorg" if OS.linux?
 brew "zplug"
@@ -10,7 +9,7 @@ brew "anyenv"
 brew "openssl@1.1"
 brew "libffi"
 brew "libyaml"
-brew "docker-compose"
+brew "docker-compose" if OS.linux?
 brew "fzf"
 brew "gawk"
 brew "ghq"
@@ -38,10 +37,13 @@ cask "kindle"
 cask "google-japanese-ime"
 cask "google-backup-and-sync"
 cask "spotify"
+cask "dropbox"
 
 if OS.mac?
   brew "reattach-to-user-namespace"
   brew 'coreutils'
   brew 'gawk'
   brew 'gnu-sed'
+  cask "iterm2"
+  cask "docker"
 end
