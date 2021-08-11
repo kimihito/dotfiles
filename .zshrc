@@ -3,7 +3,8 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   export PATH="/usr/local/sbin:$PATH"
 fi
 
-source ~/.zplug/init.zsh
+export ZPLUG_HOME=$(brew --prefix)/opt/zplug
+source $ZPLUG_HOME/init.zsh
 zplug "zplug/zplug", hook-build: 'zplug --self-manage'
 zplug "zsh-users/zsh-history-substring-search"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
@@ -25,10 +26,11 @@ zplug "mattn/efm-langserver", as:command, rename-to:efm-langserver, from:gh-r
 zplug "mattn/memo", as:command, rename-to:memo, from:gh-r
 
 if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
+  printf "Install? [y/N]: "
+  if read -q; then
+    echo
+    zplug install
+  fi
 fi
 
 zplug load --verbose
