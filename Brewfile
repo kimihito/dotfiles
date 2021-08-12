@@ -39,7 +39,6 @@ cask "google-japanese-ime"
 cask "google-backup-and-sync"
 cask "spotify"
 cask "dropbox"
-cask "logseq"
 
 if OS.mac?
   brew "reattach-to-user-namespace"
