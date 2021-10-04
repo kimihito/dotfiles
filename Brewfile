@@ -46,6 +46,7 @@ cask "slack"
 cask "spotify"
 cask "visual-studio-code"
 cask "zoom"
+cask "altair-graphql-client"
 mas "Flow", id: 1423210932
 mas "Tailscale", id: 1475387142
 mas "Todoist", id: 585829637
