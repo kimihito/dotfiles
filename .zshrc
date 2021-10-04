@@ -64,3 +64,9 @@ alias readlink='greadlink'
 alias awk='gawk'
 alias sed='gsed'
 alias date='gdate'
+
+# jump
+eval "$(jump shell)"
+
+# asdf
+. $(brew --prefix asdf)/asdf.sh
