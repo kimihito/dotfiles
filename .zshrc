@@ -70,3 +70,6 @@ eval "$(jump shell)"
 
 # asdf
 . $(brew --prefix asdf)/asdf.sh
+
+# direnv
+eval "$(direnv hook zsh)"
