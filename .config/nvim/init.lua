@@ -6,8 +6,10 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 require('packer').startup(function(use)
-  -- My plugins here
   use 'wbthomason/packer.nvim'
+  
+  use 'kyazdani42/nvim-web-devicons'
+
   use 'neovim/nvim-lspconfig'
   use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
@@ -18,13 +20,18 @@ require('packer').startup(function(use)
 
   use { 
     'nvim-telescope/telescope.nvim', 
-    requires = { { 'nvim-lua/plenary.nvim' }, {"kdheepak/lazygit.nvim" } },
-    config = function()
-      require('telescope').load_extension('lazygit')
-    end,
+    requires = { { 'nvim-lua/plenary.nvim' } },
   }
 
-  use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
+  use {
+    'TimUntersberger/neogit', 
+    requires = 'nvim-lua/plenary.nvim'
+  }
+
+
+  use { 'nvim-lualine/lualine.nvim' }
+
+  use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
 
   use {
   "nvim-neo-tree/neo-tree.nvim",
@@ -38,8 +45,8 @@ require('packer').startup(function(use)
   }
 
   use { 
-    "nvim-treeshitter/nvim-treeshitter", 
-    run = function() require('nvim-treeshitter.install').update({ with_sync = true}) end, 
+    "nvim-treesitter/nvim-treesitter", 
+    run = function() require('nvim-treesitter.install').update({ with_sync = true}) end, 
   }
 
   -- Automatically set up your configuration after cloning packer.nvim
@@ -92,6 +99,27 @@ require('lualine').setup()
 -- nvim-neo-tree/neo-tree.nvim
 require('neo-tree').setup()
 
+-- nvim-treesitter/nvim-treesitter
+require('nvim-treesitter.configs').setup({
+  ensure_installed = { 'python' },
+  incremental_selection = {
+    enable = true
+  },
+  indent = {
+    enable = true
+  }
+})
+
+
+-- TimUntersberger/neogit
+
+require('neogit').setup()
+
+
+-- akinsho/bufferline.nvim
+
+require('bufferline').setup()
+
 -- common
 vim.opt.clipboard = "unnamedplus"
 vim.opt.cmdheight = 1
@@ -99,6 +127,7 @@ vim.opt.showcmd = true
 vim.opt.laststatus = 2
 vim.opt.expandtab = true
 vim.opt.autoindent = true
+vim.opt.termguicolors = true
 vim.opt.smartindent = true
 vim.opt.swapfile = false
 vim.opt.number = true
@@ -107,6 +136,8 @@ vim.g.mapleader = " "
 
 vim.keymap.set('n', '<Leader>w', ':<C-u>w<CR>')
 vim.keymap.set('n', '<Leader>.', '<Cmd>:new $MYVIMRC<cr>', {noremap = true, silent = true})
+
+vim.keymap.set('n', '<ESC><ESC>', '<Cmd>:noh<cr>')
 
 vim.keymap.set('n', 'j', 'gj')
 vim.keymap.set('n', 'k', 'gk')
@@ -134,5 +165,9 @@ vim.keymap.set('n', 'ge', '<cmd>lua vim.diagnostic.open_float()<CR>')
 vim.keymap.set('n', 'g]', '<cmd>lua vim.diagnostic.goto_next()<CR>')
 vim.keymap.set('n', 'g[', '<cmd>lua vim.diagnostic.goto_prev()<CR>')
 
--- kdheepak/lazygit.nvim
-vim.keymap.set('n', '<Leader>gg', '<Cmd>LazyGit<cr>', {noremap = true, silent = true})
+-- TimUntersberger/neogit.nvim
+vim.keymap.set('n', '<Leader>gg', '<Cmd>Neogit<cr>', {noremap = true, silent = true})
+
+-- akinsho/bufferline.nvim
+vim.keymap.set('n', '[b', '<Cmd>BufferLineCycleNext<cr>', {noremap = true, silent = true})
+vim.keymap.set('n', ']b', '<Cmd>BufferLineCyclePrev<cr>', {noremap = true, silent = true})
