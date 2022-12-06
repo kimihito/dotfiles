@@ -30,26 +30,29 @@ brew "vim"
 brew "neovim"
 brew "zplug"
 brew "zsh"
-brew "bibendi/dip/dip"
+brew "dip"
 brew "jump"
 brew "asdf"
 brew "gpg"
 brew "direnv"
-cask "discord"
-cask "dropbox"
-cask "google-backup-and-sync"
-cask "google-chrome"
-cask "google-japanese-ime"
-cask "iterm2"
-cask "kindle"
-cask "logseq"
-cask "obsidian"
-cask "slack"
-cask "spotify"
-cask "visual-studio-code"
-cask "zoom"
-cask "altair-graphql-client"
-cask "alacritty"
-mas "Flow", id: 1423210932
-mas "Tailscale", id: 1475387142
-mas "Todoist", id: 585829637
+
+if OS.mac?
+    cask "discord"
+    cask "dropbox"
+    cask "google-backup-and-sync"
+    cask "google-chrome"
+    cask "google-japanese-ime"
+    cask "iterm2"
+    cask "kindle"
+    cask "logseq"
+    cask "obsidian"
+    cask "slack"
+    cask "spotify"
+    cask "visual-studio-code"
+    cask "zoom"
+    cask "altair-graphql-client"
+    cask "alacritty"
+    mas "Flow", id: 1423210932
+    mas "Tailscale", id: 1475387142
+    mas "Todoist", id: 585829637
+end
