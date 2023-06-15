@@ -45,7 +45,7 @@ bindkey '^]' anyframe-widget-cd-ghq-repository
 bindkey '^b' anyframe-widget-checkout-git-branch
 
 # tmux
-[[ -z "$TMUX" && ! -z "$PS1" ]] && tmux
+[[ -z "$TMUX" && ! -z "$PS1" ]] && tmux -u
 
 # anyenv
 export PATH="$HOME/.anyenv/bin:$PATH"

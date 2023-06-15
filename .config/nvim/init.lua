@@ -23,6 +23,11 @@ require('packer').startup(function(use)
     requires = { { 'nvim-lua/plenary.nvim' } },
   }
 
+  use { 
+    'nvim-telescope/telescope-file-browser.nvim', 
+  
+  }
+
   use {
     'TimUntersberger/neogit', 
     requires = 'nvim-lua/plenary.nvim'
@@ -49,12 +54,23 @@ require('packer').startup(function(use)
     run = function() require('nvim-treesitter.install').update({ with_sync = true}) end, 
   }
 
+  use {
+    'numToStr/Comment.nvim',
+  }
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
     require('packer').sync()
   end
 end)
+
+
+require("telescope").setup()
+require("telescope").load_extension("file_browser")
+
+
+-- nmuToStr/Comment.nvim
+require('Comment').setup()
 
 -- mason
 require('mason').setup()
@@ -147,8 +163,11 @@ vim.keymap.set('i', 'jj', '<ESC>')
 local telescope_builtin = require('telescope.builtin')
 vim.keymap.set('n', '<Leader>ff', telescope_builtin.find_files, {noremap = true, silent = true})
 vim.keymap.set('n', '<Leader>fg', telescope_builtin.live_grep, {noremap = true, silent = true})
-vim.keymap.set('n', '<Leader>fb', telescope_builtin.buffers, {noremap = true, silent = true})
+vim.keymap.set('n', '<Leader>f/', telescope_builtin.current_buffer_fuzzy_find, {noremap = true, silent = true})
+vim.keymap.set('n', '<Leader>fb', "<cmd> lua require('telescope.builtin').live_grep({grep_open_files=true})<CR>",  {noremap = true, silent = true})
+vim.keymap.set('n', '<Leader>fB', telescope_builtin.buffers, {noremap = true, silent = true})
 vim.keymap.set('n', '<Leader>fm', telescope_builtin.keymaps, {noremap = true, silent = true})
+vim.keymap.set('n', '<C-r><C-w>', telescope_builtin.grep_string, {noremap = true, silent = true})
 
 
 -- lsp key map
@@ -171,3 +190,6 @@ vim.keymap.set('n', '<Leader>gg', '<Cmd>Neogit<cr>', {noremap = true, silent = t
 -- akinsho/bufferline.nvim
 vim.keymap.set('n', '[b', '<Cmd>BufferLineCycleNext<cr>', {noremap = true, silent = true})
 vim.keymap.set('n', ']b', '<Cmd>BufferLineCyclePrev<cr>', {noremap = true, silent = true})
+
+-- nvim-neo-tree/neo-tree.nvim
+vim.keymap.set('n', '<C-b>', '<Cmd>Neotree show toggle reveal_force_cwd<cr>', {noremap = true})

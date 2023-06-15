@@ -24,8 +24,8 @@ set backspace=indent,eol,start
 " <Leader>というプレフィックスキーにスペースを使用する
 let g:mapleader = "\<Space>"
 
-" スペース + . でvimrcを開く open .vimrc
-nnoremap <Leader>. :new ~/.vimrc<CR>
+" スペース + . でinit.vimを開く
+nnoremap <Leader>. :new ~/.config/nvim/init.vim<CR>
 
 " スペース + wでファイル保存
 nnoremap <Leader>w :w<CR>
@@ -171,7 +171,7 @@ if executable('efm-langserver')
     autocmd User lsp_setup call lsp#register_server({
      \ 'name': 'efm-langserver',
      \ 'cmd' : {server_info->['efm-langserver', '-c='.$HOME.'/.config/efm-langserver/config.yaml', '-log='.$HOME.'/.config/efm-langserver/logs/efm-langserver.log']},
-     \ 'whitelist': ['vim', 'markdown', 'ruby', 'json'],
+     \ 'whitelist': ['vim', 'markdown', 'ruby', 'json', 'python'],
      \ })
     autocmd BufWritePre <buffer> silent! LspDocumentFormatSync
   augroup END
