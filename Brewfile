@@ -52,6 +52,7 @@ if OS.mac?
     cask "zoom"
     cask "altair-graphql-client"
     cask "alacritty"
+    cask "zed"
     tap "wez/wezterm"
     cask "wezterm"
     mas "Flow", id: 1423210932
