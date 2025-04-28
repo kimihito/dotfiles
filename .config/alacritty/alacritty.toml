@@ -1,3 +1,10 @@
+[font]
+size = 14.0
+
+[font.bold]
+
+family = "PlemolJP Console"
+
 [terminal.shell]
 program = "/usr/local/bin/fish"
 

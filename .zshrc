@@ -25,7 +25,7 @@ zplug "plugins/git", from:oh-my-zsh
 
 zplug "plugins/docker-compose", from:oh-my-zsh
 
-zplug "plugins/asdf", from:oh-my-zsh
+zplug "plugins/mise", from:oh-my-zsh
 
 zplug "plugins/tmux", from:oh-my-zsh
 
@@ -68,3 +68,4 @@ eval "$(jump shell)"
 
 # direnv
 eval "$(direnv hook zsh)"
+

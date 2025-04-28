@@ -1,0 +1,6 @@
+[tools]
+erlang = "latest"
+python = "3.12.9"
+ruby = "3.4.2"
+elixir = "latest"
+go = "latest"
